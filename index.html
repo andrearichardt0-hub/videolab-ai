@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css">
+<title>VideoLab AI</title>
+</head>
+<body>
+<header><div class="brand">🎬 <span>VideoLab <b>AI</b></span></div><small>Tu estudio de videos</small></header>
+<main>
+<section class="card">
+<h1>Creá tu video</h1><p class="muted">Armá escenas, agregá imágenes y prepará una presentación en pocos pasos.</p>
+<label for="title">Título del proyecto</label><input id="title" value="Mi primer video" maxlength="70">
+<label for="format">Formato</label><select id="format"><option value="portrait">Vertical · TikTok / Reels</option><option value="landscape">Horizontal · YouTube</option><option value="square">Cuadrado</option></select>
+<label for="style">Estilo visual</label><select id="style"><option>Dinámico</option><option>Cinematográfico</option><option>Minimalista</option><option>Emotivo</option><option>Divertido</option></select>
+<button id="addScene" class="secondary">＋ Agregar escena</button>
+</section>
+<section class="card"><div class="row"><h2>Escenas</h2><span id="sceneCount" class="pill">1 escena</span></div><div id="scenes"></div></section>
+<section class="card">
+<h2>Vista previa</h2><div id="preview" class="preview portrait"><div id="previewText">Tu historia empieza acá</div></div>
+<div class="row"><button id="play" class="secondary">▶ Vista previa</button><button id="export">Exportar video</button></div>
+<p id="status" class="muted" aria-live="polite">Agregá texto e imágenes para empezar.</p>
+</section>
+<section class="card"><h2>Tu proyecto</h2><div class="row"><button id="save" class="secondary">Guardar proyecto</button><label class="filebutton secondary">Abrir proyecto<input id="load" type="file" accept="application/json"></label></div></section>
+</main>
+<footer>VideoLab AI · Los archivos se procesan en tu dispositivo.</footer>
+<script src="app.js"></script>
+</body></html>
